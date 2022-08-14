@@ -8,7 +8,7 @@
 		<version>2.4.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.scarycoders.lean</groupId>
+	<groupId>com.springbank</groupId>
 	<artifactId>user.query.api</artifactId>
 	<version>1.0.0</version>
 	<name>user.query.api</name>
@@ -51,7 +51,7 @@
 			<version>4.4</version>
 		</dependency>
 		<dependency>
-			<groupId>com.scarycoders.lean</groupId>
+			<groupId>com.springbank</groupId>
 			<artifactId>user.core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
