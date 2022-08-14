@@ -27,3 +27,10 @@ All of the above services are deployed on docker below are the steps to run them
 
 User can create access_token using 
 POST http://localhost:8084/oauth/token along with grant type password, username and password
+
+
+# Securing the user command and user query with spring security 
+1. Adding security dependency 
+2. Using **_@EnableResourceServer @EnableGlobalMethodSecurity_**
+3. Annotating write side with @PreAuthorize("hasAuthority('WRITE_PRIVILEGE')")
+4. Annotating read side with 

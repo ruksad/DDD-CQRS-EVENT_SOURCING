@@ -9,6 +9,7 @@ import org.axonframework.messaging.responsetypes.ResponseTypes;
 import org.axonframework.queryhandling.QueryGateway;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +26,7 @@ public class UserLookUpController {
     }
 
     @GetMapping(path = "/")
+    @PreAuthorize("hasAuthority('READ_PRIVILEGE')")
     public ResponseEntity<UserLookUpResponse> getAllUsers() {
         try {
             var findAllUsersQuery = new FindAllUsersQuery();
@@ -41,6 +43,7 @@ public class UserLookUpController {
     }
 
     @GetMapping(path = "/filterById/{id}")
+    @PreAuthorize("hasAuthority('READ_PRIVILEGE')")
     public ResponseEntity<UserLookUpResponse> getUserById(@PathVariable("id") String id) {
         try {
             var findByIdQuery = new FindUserByIdQuery(id);
@@ -57,6 +60,7 @@ public class UserLookUpController {
     }
 
     @GetMapping(path = "/filterBySearch/{filter}")
+    @PreAuthorize("hasAuthority('READ_PRIVILEGE')")
     public ResponseEntity<UserLookUpResponse> searchUserByFilter(@PathVariable("filter") String filter) {
         try {
             var searchQuery = new SearchUsersQuery(filter);
