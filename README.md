@@ -33,4 +33,4 @@ POST http://localhost:8084/oauth/token along with grant type password, username 
 1. Adding security dependency 
 2. Using **_@EnableResourceServer @EnableGlobalMethodSecurity_**
 3. Annotating write side with @PreAuthorize("hasAuthority('WRITE_PRIVILEGE')")
-4. Annotating read side with 
+4. Annotating read side with @PreAuthorize("hasAuthority('READ_PRIVILEGE')")

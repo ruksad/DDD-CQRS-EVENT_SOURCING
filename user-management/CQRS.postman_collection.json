@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "2d4bd997-eac3-4782-9a34-9d58b2e64df1",
+		"name": "CQRS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "deleteuser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/v1/removeUser/6fe18591-3f96-4a38-8db0-79f65fa5248d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"removeUser",
+						"6fe18591-3f96-4a38-8db0-79f65fa5248d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjE2ODQ1MDQsInVzZXJfbmFtZSI6ImRlcnJpY2siLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSJdLCJqdGkiOiI1MTM3YjkyZi1mNWVmLTRjYTQtODBjMy1lOTQ0NDhlZTEwOGQiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19._Xf743a01zU4ceiQtRYbLOJzyuRlqW6Q6cqP1IEb2p4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\":{\n        \"firstname\":\"derrick\",\n        \"lastname\":\"zohoza\",\n        \"emailAddress\":\"test_2@gmail.com\",\n        \"account\":{\n            \"username\":\"derrick\",\n            \"password\":\"Password@123\",\n            \"roles\":[\"READ_PRIVILEGE\"]\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/registerUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"registerUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\":{\n        \"firstname\":\"Affan\",\n        \"lastname\":\"zohoza\",\n        \"emailAddress\":\"test@gmail.com\",\n        \"account\":{\n            \"username\":\"affan\",\n            \"password\":\"Password@123\",\n            \"roles\":[\"READ_PRIVILEGE\"]\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/v1/updateUser/71f66ae8-28dc-4325-a07f-b2e6c66502e6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"v1",
+						"updateUser",
+						"71f66ae8-28dc-4325-a07f-b2e6c66502e6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FilterBydId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/v1/userLookUp/filterById/2dbad9ea-549b-4d9b-b512-9765cb2e0370",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"userLookUp",
+						"filterById",
+						"2dbad9ea-549b-4d9b-b512-9765cb2e0370"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filterbySearch",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/v1/userLookUp/filterBySearch/@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"userLookUp",
+						"filterBySearch",
+						"@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OauthTokenGeneration",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic c3ByaW5nYmFua0NsaWVudDpzcHJpbmdiYW5rU2VjcmV0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "default"
+						},
+						{
+							"key": "username",
+							"value": "derrick",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "Password@123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8084/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "Autherization",
+							"value": "Basic c3ByaW5nYmFua0NsaWVudDpzcHJpbmdiYW5rU2VjcmV0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

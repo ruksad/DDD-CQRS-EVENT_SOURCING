@@ -13,6 +13,6 @@ spring:
 #security
 security:
   oauth2:
-    resources:
+    resource:
       jwt:
         key-value: springbankSigningKey
