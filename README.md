@@ -34,3 +34,8 @@ POST http://localhost:8084/oauth/token along with grant type password, username 
 2. Using **_@EnableResourceServer @EnableGlobalMethodSecurity_**
 3. Annotating write side with @PreAuthorize("hasAuthority('WRITE_PRIVILEGE')")
 4. Annotating read side with @PreAuthorize("hasAuthority('READ_PRIVILEGE')")
+
+# API gate (reverse proxy)
+1. Define regex to endpoints
+2. Use token 
+3. Use given post man collection

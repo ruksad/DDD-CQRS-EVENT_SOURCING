@@ -1,0 +1,106 @@
+{
+	"info": {
+		"_postman_id": "7338e6b8-ad5b-439c-b506-79478a5fb9d5",
+		"name": "ApiGatwWay",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "UserLookUp",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjE2ODc1NjMsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJiZDcyNDA1OC0xYzliLTQzYmEtODU0OS1hZDg0ZmVkMTkzZjgiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.4Myqojl2aOTmjZQZW8F49f25_JDlaMbkrHHVRESrQX8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2000/api/v1/userLookUp/filterBySearch/@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"v1",
+						"userLookUp",
+						"filterBySearch",
+						"@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserlookUpById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjE2ODc1NjMsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJiZDcyNDA1OC0xYzliLTQzYmEtODU0OS1hZDg0ZmVkMTkzZjgiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.4Myqojl2aOTmjZQZW8F49f25_JDlaMbkrHHVRESrQX8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2000/api/v1/userLookUp/filterById/2dbad9ea-549b-4d9b-b512-9765cb2e0370",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"v1",
+						"userLookUp",
+						"filterById",
+						"2dbad9ea-549b-4d9b-b512-9765cb2e0370"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\":{\n        \"firstname\":\"Affan\",\n        \"lastname\":\"zohoza\",\n        \"emailAddress\":\"test@gmail.com\",\n        \"account\":{\n            \"username\":\"affan\",\n            \"password\":\"Password@123\",\n            \"roles\":[\"READ_PRIVILEGE\"]\n        }\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/api/v1/updateUser/71f66ae8-28dc-4325-a07f-b2e6c66502e6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"v1",
+						"updateUser",
+						"71f66ae8-28dc-4325-a07f-b2e6c66502e6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
