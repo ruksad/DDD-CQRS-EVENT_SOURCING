@@ -13,7 +13,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjI4MDkyMzEsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJkNTNjYmRhOC05MjlhLTQ5ZTktYmE5Yy02MjU3MmQ5YjUyMTIiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.GSHk73IsyZYtV8o_97oibF4Ax37fem8b4KpLfaKnuys",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjI4MTYwMjYsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJjYmE2ZDYwYi1kMjA1LTQzYTEtOTg2NS1jMzVjN2M2ZjEwYTUiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.8e1sKI6Q5onC1x9DbR9gM1Owb8tg2zZSSaU1vA5Pkn8",
 							"type": "string"
 						}
 					]
@@ -22,7 +22,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"accountHolderId\": \"2dbad9ea-549b-4d9b-b512-9765cb2e0370\",\n    \"accountType\": \"CURRENT\",\n    \"openingBalance\": 100.0\n}",
+					"raw": "{\n    \"accountHolderId\": \"b87c2d88-b770-46e4-8ae5-4afc2a314dd9\",\n    \"accountType\": \"SAVINGS\",\n    \"openingBalance\": 100.0\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -53,7 +53,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjI4MTA1NjgsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJhYWIzNmM5OS1iMmNmLTQ2OTQtYWE4Ni1kZmVkNzMzZjU5NDEiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.8Om6jJ7_RY8E5y5QpWJAMYzJnz-llKSqxz3whlKWuSk",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjI4MTU5MDQsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJkMWE5OWJiZi01OTY4LTQyNTUtODJjMS03N2ExOWE5NzE3YTMiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.LBgWLDQDICgLHGsAD9S0uEit_DKYOFlQIYQTtjDlDuE",
 							"type": "string"
 						}
 					]
@@ -62,7 +62,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"amount\": 30.0\n}",
+					"raw": "{\n    \"amount\": 10.0\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -70,7 +70,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:2000/api/v1/depositFunds/1db1c3ff-913f-4c23-8938-da919db1e7bc",
+					"raw": "http://localhost:2000/api/v1/depositFunds/baa53b99-b020-4c53-a976-438bcac79d99",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -80,7 +80,7 @@
 						"api",
 						"v1",
 						"depositFunds",
-						"1db1c3ff-913f-4c23-8938-da919db1e7bc"
+						"baa53b99-b020-4c53-a976-438bcac79d99"
 					]
 				}
 			},
@@ -94,12 +94,53 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjI4MDkyMzEsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJkNTNjYmRhOC05MjlhLTQ5ZTktYmE5Yy02MjU3MmQ5YjUyMTIiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.GSHk73IsyZYtV8o_97oibF4Ax37fem8b4KpLfaKnuys",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjI4MTU5MDQsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJkMWE5OWJiZi01OTY4LTQyNTUtODJjMS03N2ExOWE5NzE3YTMiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.LBgWLDQDICgLHGsAD9S0uEit_DKYOFlQIYQTtjDlDuE",
 							"type": "string"
 						}
 					]
 				},
-				"method": "POST",
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": \"110\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/api/v1/withdrawFunds/baa53b99-b020-4c53-a976-438bcac79d99",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"v1",
+						"withdrawFunds",
+						"baa53b99-b020-4c53-a976-438bcac79d99"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "close Account",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjI4MTc4MTksInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiIxNmQ0M2VjMy0yNjlmLTQ1NTctOTc2NS0zZWQ5OWU2MjJjZDQiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.A0B8nH7QoWqgMDIwcYdvZRT6Q7dsLulASyBUbYr4tMM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
 				"header": [],
 				"body": {
 					"mode": "raw",
@@ -111,7 +152,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:2000/api/v1/openBankAccount",
+					"raw": "http://localhost:2000/api/v1/closeAccount/1d3b544c-4bf3-409f-a056-a17cfa17a748",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -120,7 +161,140 @@
 					"path": [
 						"api",
 						"v1",
-						"openBankAccount"
+						"closeAccount",
+						"1d3b544c-4bf3-409f-a056-a17cfa17a748"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountLookUp",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjI4MjY3NTgsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJmODQ1ZDgyOS1mZmMyLTRlMTMtYjYzMC00NTIxYWVmYTcwNDciLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.VoiH6Brc5qe0myLySdyIedRVU0tsvzL6E33nXKYsA8s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2000/api/v1/bankAccountLookup/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"v1",
+						"bankAccountLookup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountLookUp by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjI4MjY3NTgsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJmODQ1ZDgyOS1mZmMyLTRlMTMtYjYzMC00NTIxYWVmYTcwNDciLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.VoiH6Brc5qe0myLySdyIedRVU0tsvzL6E33nXKYsA8s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2000/api/v1/bankAccountLookup/byId/1db1c3ff-913f-4c23-8938-da919db1e7bc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"v1",
+						"bankAccountLookup",
+						"byId",
+						"1db1c3ff-913f-4c23-8938-da919db1e7bc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountLookUpAccountHolderId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjI4MjY3NTgsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJmODQ1ZDgyOS1mZmMyLTRlMTMtYjYzMC00NTIxYWVmYTcwNDciLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.VoiH6Brc5qe0myLySdyIedRVU0tsvzL6E33nXKYsA8s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2000/api/v1/bankAccountLookup/byHolderId/b87c2d88-b770-46e4-8ae5-4afc2a314dd9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"v1",
+						"bankAccountLookup",
+						"byHolderId",
+						"b87c2d88-b770-46e4-8ae5-4afc2a314dd9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AccountLookUpByEquality",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjI4MjY3NTgsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJmODQ1ZDgyOS1mZmMyLTRlMTMtYjYzMC00NTIxYWVmYTcwNDciLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.VoiH6Brc5qe0myLySdyIedRVU0tsvzL6E33nXKYsA8s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2000/api/v1/bankAccountLookup/withBalance/LESS_THAN/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"v1",
+						"bankAccountLookup",
+						"withBalance",
+						"LESS_THAN",
+						"100"
 					]
 				}
 			},

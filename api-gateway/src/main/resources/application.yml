@@ -39,3 +39,13 @@ spring:
           uri: http://localhost:9091/api/v1/withdrawFunds/**
           predicates:
             - Path=/api/v1/withdrawFunds/**
+
+        - id: bankAccCmdApi-closeAccount
+          uri: http://localhost:9091/api/v1/closeAccount/**
+          predicates:
+            - Path=/api/v1/closeAccount/**
+
+        - id: bankQueryApi
+          uri: http://localhost:9092/api/v1/bankAccountLookup/**
+          predicates:
+            - Path=/api/v1/bankAccountLookup/**
