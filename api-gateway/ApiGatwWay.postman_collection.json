@@ -13,7 +13,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjE2ODc1NjMsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJiZDcyNDA1OC0xYzliLTQzYmEtODU0OS1hZDg0ZmVkMTkzZjgiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.4Myqojl2aOTmjZQZW8F49f25_JDlaMbkrHHVRESrQX8",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjI4MDczMDAsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJjYjBmMzUxZi01Nzc3LTQzOTEtYjM0OC0wYzhlZmU1NzAzYTAiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.Egj5zt1X-UKAyKLpW6vk8sUGDk56cdCULV885e8m-HQ",
 							"type": "string"
 						}
 					]
@@ -74,7 +74,17 @@
 		{
 			"name": "UpdateUser",
 			"request": {
-				"method": "POST",
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjE2ODgxMDQsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJhZjA5NGRhOS00NDIzLTRjODQtYjA2My1hOTI5NGI5MDIzNGYiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.vcRyfkT3yBKlJlppr5r0qNMaBpjqNIOiYbcgVkjz0Bc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",

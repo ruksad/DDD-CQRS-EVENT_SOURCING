@@ -12,6 +12,7 @@ spring:
     show-sql: true
     hibernate:
       dll-auto: update
+    generate-ddl: true
   datasource:
     url: jdbc:mysql://localhost:3306/bank
     username: root

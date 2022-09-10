@@ -75,6 +75,7 @@ public class AccountAggregate {
 
     @EventSourcingHandler
     public void on(FundsWithdrawnEvent fundsWithdrawnEvent){
+
         this.balance-= fundsWithdrawnEvent.getAmount();
     }
 

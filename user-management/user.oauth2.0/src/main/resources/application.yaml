@@ -16,5 +16,5 @@ security:
       client-id: springbankClient
       client-secret: springbankSecret
       signing-key: springbankSigningKey
-      token-validity-seconds: 300
+      token-validity-seconds: 3000
       refresh-token-validity-seconds: 1500

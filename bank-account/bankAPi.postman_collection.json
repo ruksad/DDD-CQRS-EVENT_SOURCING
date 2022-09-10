@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "601cac5c-187f-4ec5-9f07-4ef46fbfe204",
+		"name": "bankAPi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CreatebankAccount",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjI4MDkyMzEsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJkNTNjYmRhOC05MjlhLTQ5ZTktYmE5Yy02MjU3MmQ5YjUyMTIiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.GSHk73IsyZYtV8o_97oibF4Ax37fem8b4KpLfaKnuys",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"accountHolderId\": \"2dbad9ea-549b-4d9b-b512-9765cb2e0370\",\n    \"accountType\": \"CURRENT\",\n    \"openingBalance\": 100.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/api/v1/openBankAccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"v1",
+						"openBankAccount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DepositFunds",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjI4MTA1NjgsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJhYWIzNmM5OS1iMmNmLTQ2OTQtYWE4Ni1kZmVkNzMzZjU5NDEiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.8Om6jJ7_RY8E5y5QpWJAMYzJnz-llKSqxz3whlKWuSk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 30.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/api/v1/depositFunds/1db1c3ff-913f-4c23-8938-da919db1e7bc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"v1",
+						"depositFunds",
+						"1db1c3ff-913f-4c23-8938-da919db1e7bc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw funds",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjI4MDkyMzEsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiJkNTNjYmRhOC05MjlhLTQ5ZTktYmE5Yy02MjU3MmQ5YjUyMTIiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.GSHk73IsyZYtV8o_97oibF4Ax37fem8b4KpLfaKnuys",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"accountHolderId\": \"2dbad9ea-549b-4d9b-b512-9765cb2e0370\",\n    \"accountType\": \"CURRENT\",\n    \"openingBalance\": 100.0\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2000/api/v1/openBankAccount",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"api",
+						"v1",
+						"openBankAccount"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -74,8 +74,13 @@
 			<artifactId>bankacc.core</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+        </dependency>
 
-	</dependencies>
+    </dependencies>
 
 	<build>
 		<plugins>

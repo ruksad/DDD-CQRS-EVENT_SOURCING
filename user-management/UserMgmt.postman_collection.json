@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "2d4bd997-eac3-4782-9a34-9d58b2e64df1",
-		"name": "CQRS",
+		"name": "UserMgmt",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -124,6 +124,16 @@
 		{
 			"name": "filterbySearch",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjE2ODcyMzYsInVzZXJfbmFtZSI6InNpZHNpZDI4MTAiLCJhdXRob3JpdGllcyI6WyJSRUFEX1BSSVZJTEVHRSIsIldSSVRFX1BSSVZJTEVHRSJdLCJqdGkiOiI5MzdkMWUxYi0yMGZmLTQ5MjAtODM4Ny05OWYxNTMyMzE4YmIiLCJjbGllbnRfaWQiOiJzcHJpbmdiYW5rQ2xpZW50Iiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.uQ-mPCHd-YXKokLuNGxpkKGd9Jkc9nEMd24PoXBkjKU",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -165,7 +175,7 @@
 						},
 						{
 							"key": "username",
-							"value": "derrick",
+							"value": "sidsid2810",
 							"type": "default"
 						},
 						{
