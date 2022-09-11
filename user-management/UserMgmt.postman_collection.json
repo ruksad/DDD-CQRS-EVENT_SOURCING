@@ -186,12 +186,12 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8084/oauth/token",
+					"raw": "http://localhost:8083/oauth/token",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8084",
+					"port": "8083",
 					"path": [
 						"oauth",
 						"token"

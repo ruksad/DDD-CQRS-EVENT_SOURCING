@@ -26,7 +26,7 @@ All of the above services are deployed on docker below are the steps to run them
 # user.oauth2.0
 
 User can create access_token using 
-POST http://localhost:8084/oauth/token along with grant type password, username and password
+POST http://localhost:8083/oauth/token along with grant type password, username and password
 
 
 # Securing the user command and user query with spring security 
