@@ -48,6 +48,15 @@ services:
     environment:
       - "SPRING_PROFILES_ACTIVE=docker"
 
+  user-oauth2:
+    container_name: user-oauth2
+    image: user-oauth2:latest
+    restart: always
+    ports:
+      - 8083:8083
+    environment:
+      - "SPRING_PROFILES_ACTIVE=docker"
+
 networks:
   default:
     external:
