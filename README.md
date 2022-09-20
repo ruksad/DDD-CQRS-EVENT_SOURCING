@@ -32,7 +32,7 @@ User can create access_token using
 POST http://localhost:8083/oauth/token along with grant type password, username and password
 
 
-# Securing the user command and user query with spring security 
+# Securing the user command , user query, bank command and bank query with spring security Oauth2.0
 1. Adding security dependency 
 2. Using **_@EnableResourceServer @EnableGlobalMethodSecurity_**
 3. Annotating write side with @PreAuthorize("hasAuthority('WRITE_PRIVILEGE')")
