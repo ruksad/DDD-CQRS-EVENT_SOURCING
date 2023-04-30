@@ -31,6 +31,22 @@ public class AxonConfig {
     @Value("${spring.data.mongodb.database:bank}")
     private String mongoDatabase;
 
+
+    @Bean
+    public TokenStore tokenStore(Serializer serializer) {
+        return MongoTokenStore.builder()
+                .mongoTemplate(axonMongoTemplate())
+                .serializer(serializer)
+                .build();
+    }
+
+    @Bean
+    public MongoTemplate axonMongoTemplate() {
+        return DefaultMongoTemplate.builder()
+                .mongoDatabase(mongo(), mongoDatabase)
+                .build();
+    }
+
     @Bean
     public MongoClient mongo() {
         var mongoFactory = new MongoFactory();
@@ -42,17 +58,10 @@ public class AxonConfig {
     }
 
     @Bean
-    public MongoTemplate axonMongoTemplate() {
-        return DefaultMongoTemplate.builder()
-                .mongoDatabase(mongo(), mongoDatabase)
-                .build();
-    }
-
-    @Bean
-    public TokenStore tokenStore(Serializer serializer) {
-        return MongoTokenStore.builder()
-                .mongoTemplate(axonMongoTemplate())
-                .serializer(serializer)
+    public EmbeddedEventStore eventStore(EventStorageEngine storageEngine, AxonConfiguration configuration) {
+        return EmbeddedEventStore.builder()
+                .storageEngine(storageEngine)
+                .messageMonitor(configuration.messageMonitor(EventStore.class, "eventStore"))
                 .build();
     }
 
@@ -65,11 +74,4 @@ public class AxonConfig {
                 .build();
     }
 
-    @Bean
-    public EmbeddedEventStore eventStore(EventStorageEngine storageEngine, AxonConfiguration configuration) {
-        return EmbeddedEventStore.builder()
-                .storageEngine(storageEngine)
-                .messageMonitor(configuration.messageMonitor(EventStore.class, "eventStore"))
-                .build();
-    }
 }

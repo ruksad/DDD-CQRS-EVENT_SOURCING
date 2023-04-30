@@ -30,7 +30,7 @@ public class WithdrawFundsController {
     public ResponseEntity<BaseResponse> withdrawFunds(@PathVariable("id") String bankAccountId,
                                                       @Valid @RequestBody WithdrawFundsCommand withdrawFundsCommand){
         withdrawFundsCommand.setId(bankAccountId);
-
+        log.info("WithdrawFundsCommand command is received with bank account id {}", bankAccountId);
         try {
             commandGateway.sendAndWait(withdrawFundsCommand);
             return new ResponseEntity<>(new BaseResponse("Funds withdrawn successfully"), HttpStatus.OK);

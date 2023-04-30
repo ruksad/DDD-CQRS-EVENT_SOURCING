@@ -32,7 +32,7 @@ public class OpenAccountController {
     public ResponseEntity<OpenAccountResponse> openAccount(@Valid @RequestBody OpenAccountCommand openAccountCommand) {
         var id = UUID.randomUUID().toString();
         openAccountCommand.setId(id);
-
+        log.info("Open account command is received with id: {} ",id);
         try {
             commandGateway.send(openAccountCommand);
             return new ResponseEntity<>(new OpenAccountResponse(id, "Successfully account created"), HttpStatus.CREATED);

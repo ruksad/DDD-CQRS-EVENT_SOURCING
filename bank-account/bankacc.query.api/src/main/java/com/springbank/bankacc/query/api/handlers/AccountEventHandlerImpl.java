@@ -6,6 +6,7 @@ import com.springbank.bankacc.core.events.FundsDepositedEvent;
 import com.springbank.bankacc.core.events.FundsWithdrawnEvent;
 import com.springbank.bankacc.core.models.BankAccount;
 import com.springbank.bankacc.query.api.repositories.AccountRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.axonframework.config.ProcessingGroup;
 import org.axonframework.eventhandling.EventHandler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,8 @@ import java.util.Optional;
 
 @Service
 @ProcessingGroup("bankAccount-group")
-public class AccountEventHandlerImpl implements AccountEventHandler{
+@Slf4j
+public class AccountEventHandlerImpl implements AccountEventHandler {
 
     private final AccountRepository accRepo;
 
@@ -28,7 +30,8 @@ public class AccountEventHandlerImpl implements AccountEventHandler{
     @Override
     @EventHandler
     public void on(AccountOpenedEvent accountOpenedEvent) {
-        var bankAccount=BankAccount.builder()
+        log.info("AccountOpenedEvent is received on query side with id {}", accountOpenedEvent.getId());
+        var bankAccount = BankAccount.builder()
                 .id(accountOpenedEvent.getId())
                 .accountHolderId(accountOpenedEvent.getAccountHolderId())
                 .accountType(accountOpenedEvent.getAccountType())
@@ -42,7 +45,7 @@ public class AccountEventHandlerImpl implements AccountEventHandler{
     @EventHandler
     public void on(FundsDepositedEvent fundsDepositedEvent) {
         Optional<BankAccount> byId = accRepo.findById(fundsDepositedEvent.getId());
-        if(byId.isPresent()){
+        if (byId.isPresent()) {
             byId.get().setBalance(fundsDepositedEvent.getBalance());
             accRepo.save(byId.get());
         }
@@ -51,8 +54,9 @@ public class AccountEventHandlerImpl implements AccountEventHandler{
     @Override
     @EventHandler
     public void on(FundsWithdrawnEvent fundsWithdrawnEvent) {
+        log.info("FundsWithdrawnEvent is received on query side and funds will be deducted by {} units and in account id {} ", fundsWithdrawnEvent.getAmount(), fundsWithdrawnEvent.getId());
         Optional<BankAccount> byId = accRepo.findById(fundsWithdrawnEvent.getId());
-        if(byId.isPresent()){
+        if (byId.isPresent()) {
             byId.get().setBalance(fundsWithdrawnEvent.getBalance());
             accRepo.save(byId.get());
         }
