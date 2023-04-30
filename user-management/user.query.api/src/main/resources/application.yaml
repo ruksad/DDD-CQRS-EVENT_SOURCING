@@ -16,3 +16,6 @@ security:
     resource:
       jwt:
         key-value: springbankSigningKey
+
+#logging:
+#  file.name: user-query.log

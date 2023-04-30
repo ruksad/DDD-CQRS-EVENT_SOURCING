@@ -13,3 +13,6 @@ security:
     resource:
       jwt:
         key-value: springbankSigningKey
+
+#logging:
+#  file.name: bank-command.log

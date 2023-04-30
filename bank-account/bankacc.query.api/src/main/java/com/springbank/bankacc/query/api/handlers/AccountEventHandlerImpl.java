@@ -44,6 +44,7 @@ public class AccountEventHandlerImpl implements AccountEventHandler {
     @Override
     @EventHandler
     public void on(FundsDepositedEvent fundsDepositedEvent) {
+        log.info("FundsDepositedEvent is received in read side amount deposited will be shown in db");
         Optional<BankAccount> byId = accRepo.findById(fundsDepositedEvent.getId());
         if (byId.isPresent()) {
             byId.get().setBalance(fundsDepositedEvent.getBalance());

@@ -9,6 +9,7 @@ import com.springbank.user.core.events.UserRegisteredEvent;
 import com.springbank.user.core.events.UserRemovedEvent;
 import com.springbank.user.core.events.UserUpdatedEvent;
 import com.springbank.user.core.models.User;
+import lombok.extern.slf4j.Slf4j;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;
@@ -18,12 +19,13 @@ import org.axonframework.spring.stereotype.Aggregate;
 import java.util.UUID;
 
 @Aggregate
+@Slf4j
 public class UserAggregate {
     @AggregateIdentifier
     private String id;
     private User user;
 
-    private final PasswordEncoder passwordEncoder;
+    private PasswordEncoder passwordEncoder = null;
 
     public UserAggregate() {
         passwordEncoder = new PasswordEncoderImpl();
@@ -31,6 +33,7 @@ public class UserAggregate {
 
     @CommandHandler
     public UserAggregate(RegisterUserCommand command) {
+        log.info("RegisterUserCommand command is received for the user name:{} ", command.getUser().getAccount().getUsername());
         var newUser = command.getUser();
         newUser.setId(command.getId());
         var password = newUser.getAccount().getPassword();
@@ -72,6 +75,7 @@ public class UserAggregate {
 
     @EventSourcingHandler
     public void on(UserRegisteredEvent event) {
+        log.info("UserRegisteredEvent is received on userAggregate for userId :{}", event.getUser().getId());
         this.id = event.getId();
         this.user = event.getUser();
     }

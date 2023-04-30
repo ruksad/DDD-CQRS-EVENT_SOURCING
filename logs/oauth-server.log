@@ -1,0 +1,3 @@
+30-04-2023 19:05:52.582 [main] INFO  com.springbank.user.oauth20.OAuth2Application.logStarting - Starting OAuth2Application on siddiqui with PID 28286 (/home/ruksad/Documents/learn/udemy/masteringCqrsAndEventSourcing/DDD-CQRS-EVENT_SOURCING/user.oauth2.0/target/classes started by ruksad in /home/ruksad/Documents/learn/udemy/masteringCqrsAndEventSourcing/DDD-CQRS-EVENT_SOURCING)
+30-04-2023 19:05:52.585 [main] INFO  com.springbank.user.oauth20.OAuth2Application.logStartupProfileInfo - No active profile set, falling back to default profiles: default
+30-04-2023 19:05:55.681 [main] INFO  com.springbank.user.oauth20.OAuth2Application.logStarted - Started OAuth2Application in 3.517 seconds (JVM running for 3.876)

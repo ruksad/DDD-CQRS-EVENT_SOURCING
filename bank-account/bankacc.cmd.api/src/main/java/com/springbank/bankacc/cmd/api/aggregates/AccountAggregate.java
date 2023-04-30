@@ -50,6 +50,7 @@ public class AccountAggregate {
 
     @CommandHandler
     public void handle(DepositFundsCommand depositFundsCommand) {
+        log.info("FundsDepositedEvent will be triggered for the account {}",depositFundsCommand.getId());
         var event = FundsDepositedEvent.builder()
                 .id(depositFundsCommand.getId())
                 .amount(depositFundsCommand.getAmount())
@@ -60,6 +61,7 @@ public class AccountAggregate {
 
     @EventSourcingHandler
     public void on(FundsDepositedEvent fundsDepositedEvent) {
+        log.info("FundsDepositedEvent is received in AccountAggregate to deposit fund by {} units ",fundsDepositedEvent.getAmount());
         this.balance += fundsDepositedEvent.getAmount();
     }
 

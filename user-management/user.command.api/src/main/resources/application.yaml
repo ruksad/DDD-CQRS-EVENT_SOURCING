@@ -16,3 +16,7 @@ security:
     resource:
       jwt:
         key-value: springbankSigningKey
+
+#ELK
+#logging:
+#  file.name: user-command.log

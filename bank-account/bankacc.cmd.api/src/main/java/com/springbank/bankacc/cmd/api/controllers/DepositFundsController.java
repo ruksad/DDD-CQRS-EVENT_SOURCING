@@ -27,7 +27,7 @@ public class DepositFundsController {
     @PutMapping(path = "/{id}")
     @PreAuthorize("hasAuthority('WRITE_PRIVILEGE')")
     public ResponseEntity<BaseResponse> depositFunds(@PathVariable(value = "id") String bankAccountId, @Valid @RequestBody DepositFundsCommand depositFundsCommand) {
-
+        log.info("DepositFundsCommand is received and funds {} of units will be deposited in account {}",depositFundsCommand.getAmount(),bankAccountId);
         depositFundsCommand.setId(bankAccountId);
 
         try {

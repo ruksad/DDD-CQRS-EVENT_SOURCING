@@ -20,3 +20,5 @@ security:
       refresh-token-validity-seconds: 1500
 
 
+#logging:
+#  file.name: oauth-server.log
