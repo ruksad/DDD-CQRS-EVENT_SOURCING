@@ -6,12 +6,12 @@
         </encoder>
     </appender>
     <appender name="SAVE-TO-FILE" class="ch.qos.logback.core.FileAppender">
-        <file>logs/bank-command.log</file>
+        <file>/home/ruksad/Documents/projects/DDD-CQRS-EVENT_SOURCING/logs/bank-command.log</file>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <Pattern>%d{dd-MM-yyyy HH:mm:ss.SSS} [%thread] %-5level %logger{64}.%M - %msg%n</Pattern>
         </encoder>
     </appender>
-    <logger name="bankacc.cmd.api" additivity="false" level="info">
+    <logger name="com.springbank.bankacc.cmd.api" additivity="false" level="info">
         <appender-ref ref="SAVE-TO-FILE"/>
         <appender-ref ref="STDOUT"/>
     </logger>
