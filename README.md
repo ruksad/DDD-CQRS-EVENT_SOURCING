@@ -24,7 +24,7 @@ All of the above services are deployed on docker below are the steps to run them
 5. Create user command and query microservices in docker-compose
 6. Create bank command and query microservices in docker-compose
 7. Create api-gateway service in docker-compose
-8. you will have to register first user with non security user.command.api 
+8. You will have to register first user with non security user.command.api 
 
 
 # user.oauth2.0
