@@ -25,6 +25,13 @@ All of the above services are deployed on docker below are the steps to run them
 6. Create bank command and query microservices in docker-compose
 7. Create api-gateway service in docker-compose
 8. You will have to register first user with non security user.command.api 
+9. To run the docker compose up you will have to build the image of all the microservices manually or put them in your remote docker hub 
+   a.   docker build -t api-gateway .
+   b.   docker build -t user-oauth2 .
+   c.   docker build -t user-cmd-api .
+   d.   docker build -t  user-query-api . 
+   e.   docker build -t bankacc-cmd-api .
+   f.   docker build -t bankacc-query-api .
 
 
 # user.oauth2.0
@@ -39,6 +46,6 @@ POST http://localhost:8083/oauth/token along with grant type password, username 
 3. Annotating write side with @PreAuthorize("hasAuthority('WRITE_PRIVILEGE')")
 4. Annotating read side with @PreAuthorize("hasAuthority('READ_PRIVILEGE')")
 
-# API gate
+# API gate-way
 1. Define endpoints and regex to endpoints
 3. Use given post man collection
